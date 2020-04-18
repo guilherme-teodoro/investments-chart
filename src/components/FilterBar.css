@@ -1,0 +1,17 @@
+.FilterBar {
+  background: var(--gray-100);
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 32px;
+  color: var(--gray-600);
+  text-align: right;
+}
+
+.FilterBar__select {
+  background: transparent;
+  border: none;
+  color: #587184;
+  font-size: 16px;
+  padding: 0;
+  font-weight: bold;
+}

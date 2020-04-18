@@ -8,6 +8,6 @@ export function formatCurrency(value) {
   }).format(value);
 }
 
-export function formatDate(timestamp) {
-  return format(new Date(timestamp), "dd LLL yyyy", { locale: pt });
+export function formatDate(date) {
+  return format(date, "dd LLL yyyy", { locale: pt });
 }

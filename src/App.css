@@ -1,63 +1,37 @@
+:root {
+  --container: 750px;
+  --gray-100: #f7fafc;
+  --gray-200: #edf2f7;	
+  --gray-300: #e2e8f0;	
+  --gray-400: #cbd5e0;	
+  --gray-500: #a0aec0;	
+  --gray-600: #718096;	
+  --gray-700: #4a5568;	
+  --gray-800: #2d3748;	
+  --gray-900: #1a202c;
+
+  --blue-100: #EBF8FF;
+  --blue-200: #BEE3F8;
+  --blue-300: #90CDF4;
+  --blue-400: #63B3ED;
+  --blue-500: #4299E1;
+  --blue-600: #3182CE;
+  --blue-700: #2B6CB0;
+  --blue-800: #2C5282;
+  --blue-900: #2A4365;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.recharts-xAxis .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick:first-of-type text {
-    text-anchor: start;
-}
-
-.recharts-xAxis .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick:last-of-type text {
-    text-anchor: end;
-}
-
-.chart__tooltip {
-    background: rgba(0,0,0,0.9);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    padding: 12px;
-    color: white;
-    border-radius: 4px;
-    text-align: right
-}
-
-.chart__tooltip-date {
-    font-size: 14px;
-}
-
-.chart__tooltip-amount {
-    font-weight: 600;
+  align-items: center;
+  max-width: var(--container);
+  margin: 0 auto;
+  height: 100%;
 }

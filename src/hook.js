@@ -26,26 +26,22 @@ export function useLocalStorage(key, initialValue) {
   return [storedValue, setValue];
 }
 
-export function usePersistentFetch(url) {
-  const [data, setData] = useLocalStorage(url, null);
-  const [loading, setLoading] = useState(true);
+export function useFetch(url) {
+  const [response, setResponse] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchUrl() {
-      if (data) {
-        setData(data);
-        setLoading(false);
-      } else {
-        const response = await fetch(url);
-        const json = await response.json();
+    const fetchData = async () => {
+      setIsLoading(true);
 
-        setData(json);
-        setLoading(false);
-      }
-    }
+        const res = await fetch(url);
+        const json = await res.json();
+        setResponse(json);
+        setIsLoading(false);
+    };
 
-    fetchUrl();
-  }, [url, data, setData]);
+    fetchData();
+  }, [url]);
 
-  return [data, loading];
-}
+  return [response, isLoading];
+};
