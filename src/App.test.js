@@ -3,7 +3,8 @@ import { render, act } from "@testing-library/react";
 import { waitFor, getByTestId } from "@testing-library/dom";
 import App from "./App";
 
-test("render App", async () => {
+describe("App", () => {
+test("render", async () => {
   await act(async () => {
     const mockData = [
       [1565308800000, 24960],
@@ -25,4 +26,19 @@ test("render App", async () => {
       expect(getByTestId("chart")).toBeInTheDocument();
     });
   });
+});
+
+test("empty state", async () => {
+  await act(async () => {
+    const mockData = [ ];
+
+    fetch.mockResponseOnce(JSON.stringify(mockData));
+    const { getByText } = render(<App />);
+    expect(getByText(/Carregando/i)).toBeInTheDocument();
+
+    await waitFor(() => {
+      expect(getByText(/Nada para mostrar/i)).toBeInTheDocument();
+    });
+  });
+});
 });

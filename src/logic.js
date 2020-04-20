@@ -9,24 +9,24 @@ export function filterByType(lastEntry, type) {
     const now = new Date(lastEntry);
 
     switch (type) {
-      case "all":
+      case "ALL":
         return true;
-      case "lastMonth":
+      case "LAST_MONTH":
         return isWithinInterval(date, {
           start: sub(now, { months: 1 }),
           end: now,
         });
-      case "threeMonths":
+      case "THREE_MONTHS":
         return isWithinInterval(date, {
           start: sub(now, { months: 3 }),
           end: now,
         });
-      case "lastYear":
+      case "LAST_YEAR":
         return isWithinInterval(date, {
           start: sub(now, { years: 1 }),
           end: now,
         });
-      case "twoYears":
+      case "TWO_YEARS":
         return isWithinInterval(date, {
           start: sub(now, { years: 2 }),
           end: now,

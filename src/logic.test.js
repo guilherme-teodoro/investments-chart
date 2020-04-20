@@ -36,25 +36,25 @@ describe("fitlerByType", () => {
   ];
 
   test("filter all", () => {
-    expect(mockData.filter(filterByType(now, "all"))).toEqual(mockData);
+    expect(mockData.filter(filterByType(now, "ALL"))).toEqual(mockData);
   });
 
   test("filter last month", () => {
-    expect(mockData.filter(filterByType(now, "lastMonth"))).toEqual([
+    expect(mockData.filter(filterByType(now, "LAST_MONTH"))).toEqual([
       { amount: 23450, date: 1587168000000 },
       { amount: 23450, date: 1586908800000 },
     ]);
   });
 
   test("filter three months", () => {
-    expect(mockData.filter(filterByType(now, "threeMonths"))).toEqual([
+    expect(mockData.filter(filterByType(now, "THREE_MONTHS"))).toEqual([
       { amount: 23450, date: 1587168000000 },
       { amount: 23450, date: 1586908800000 },
     ]);
   });
 
   test("filter last year", () => {
-    expect(mockData.filter(filterByType(now, "lastYear"))).toEqual([
+    expect(mockData.filter(filterByType(now, "LAST_YEAR"))).toEqual([
       { amount: 23450, date: 1587168000000 },
       { amount: 23450, date: 1586908800000 },
       { amount: 23450, date: 1579046400000 },
@@ -63,7 +63,7 @@ describe("fitlerByType", () => {
   });
 
   test("filter two years", () => {
-    expect(mockData.filter(filterByType(now, "twoYears"))).toEqual([
+    expect(mockData.filter(filterByType(now, "TWO_YEARS"))).toEqual([
       { amount: 23450, date: 1587168000000 },
       { amount: 23450, date: 1586908800000 },
       { amount: 23450, date: 1579046400000 },
