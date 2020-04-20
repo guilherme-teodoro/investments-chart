@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./FilterBar.css";
 
 export default function FilterBar({ value, options, onChange }) {
@@ -11,7 +11,7 @@ export default function FilterBar({ value, options, onChange }) {
         value={value}
         onChange={(e) => onChange(e.currentTarget.value)}
       >
-        {options.map(({value, label}) => (
+        {options.map(({ value, label }) => (
           <option key={value} value={value}>
             {label}
           </option>

@@ -1,29 +1,41 @@
-.recharts-xAxis .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick:first-of-type text {
-    text-anchor: start;
+.recharts-xAxis
+  .recharts-cartesian-axis-ticks
+  > .recharts-cartesian-axis-tick:first-of-type
+  text {
+  text-anchor: start;
 }
 
-.recharts-xAxis .recharts-cartesian-axis-ticks > .recharts-cartesian-axis-tick:last-of-type text {
-    text-anchor: end;
+.recharts-xAxis
+  .recharts-cartesian-axis-ticks
+  > .recharts-cartesian-axis-tick:last-of-type
+  text {
+  text-anchor: end;
 }
 
 .Chart {
-    height: 400px;
-    width: 100%;
+  height: 400px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .Chart {
+    height: 200px;
+  }
 }
 
 .ChartTooltip {
-    background: rgba(0,0,0,0.9);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    padding: 12px;
-    color: white;
-    border-radius: 4px;
-    text-align: right
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: var(--shadow-md);
+  padding: 12px;
+  color: white;
+  border-radius: 4px;
+  text-align: right;
 }
 
 .ChartTooltip__date {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .ChartTooltip__amount {
-    font-weight: 600;
+  font-weight: 600;
 }

@@ -1,27 +1,31 @@
 :root {
   --container: 750px;
   --gray-100: #f7fafc;
-  --gray-200: #edf2f7;	
-  --gray-300: #e2e8f0;	
-  --gray-400: #cbd5e0;	
-  --gray-500: #a0aec0;	
-  --gray-600: #718096;	
-  --gray-700: #4a5568;	
-  --gray-800: #2d3748;	
+  --gray-200: #edf2f7;
+  --gray-300: #e2e8f0;
+  --gray-400: #cbd5e0;
+  --gray-500: #a0aec0;
+  --gray-600: #718096;
+  --gray-700: #4a5568;
+  --gray-800: #2d3748;
   --gray-900: #1a202c;
 
-  --blue-100: #EBF8FF;
-  --blue-200: #BEE3F8;
-  --blue-300: #90CDF4;
-  --blue-400: #63B3ED;
-  --blue-500: #4299E1;
-  --blue-600: #3182CE;
-  --blue-700: #2B6CB0;
-  --blue-800: #2C5282;
-  --blue-900: #2A4365;
+  --blue-100: #ebf8ff;
+  --blue-200: #bee3f8;
+  --blue-300: #90cdf4;
+  --blue-400: #63b3ed;
+  --blue-500: #4299e1;
+  --blue-600: #3182ce;
+  --blue-700: #2b6cb0;
+  --blue-800: #2c5282;
+  --blue-900: #2a4365;
+
+  --white: #ffffff;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   width: 100%;
   height: 100%;
 }
@@ -34,4 +38,22 @@ html, body, #root {
   max-width: var(--container);
   margin: 0 auto;
   height: 100%;
+  padding: 0 32px;
+}
+
+.App__header {
+  font-size: 48px;
+  color: var(--gray-800);
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .App {
+    justify-content: flex-start;
+  }
+
+  .App__header {
+    font-size: 40px;
+  }
 }
