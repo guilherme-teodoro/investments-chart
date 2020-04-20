@@ -1,6 +1,6 @@
 # investments chart
 
-Live: [investments-chart.now.sh](investments-chart.now.sh)
+Live: [investments-chart.now.sh](https://investments-chart.now.sh)
 
 Aplicação para visualização de ganhos monetários ao longo de um certo período, usando os novos recursos do React Hooks para o controle de estado da aplicação, junto com funções de lógica para adaptação e filtragem dos dados de forma pura. E o recharts para plotar o gráfico.
 
