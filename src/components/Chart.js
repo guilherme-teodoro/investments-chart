@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
+import PropTypes from "prop-types";
 import React from "react";
 import { formatCurrency, formatDate } from "../util";
 import "./Chart.css";
@@ -19,6 +20,11 @@ export function CustomTooltip({ date, amount }) {
     </div>
   );
 }
+
+CustomTooltip.propTypes = {
+  amount: PropTypes.number.isRequired,
+  date: PropTypes.number.isRequired,
+};
 
 export default function InvestmentChart({ data }) {
   return (
@@ -72,3 +78,12 @@ export default function InvestmentChart({ data }) {
     </div>
   );
 }
+
+InvestmentChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.exact({
+      amount: PropTypes.number.isRequired,
+      date: PropTypes.number.isRequired,
+    })
+  ),
+};

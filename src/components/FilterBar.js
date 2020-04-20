@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./FilterBar.css";
 
 export default function FilterBar({ value, options, onChange }) {
@@ -20,3 +21,12 @@ export default function FilterBar({ value, options, onChange }) {
     </div>
   );
 }
+
+FilterBar.propTypes = {
+  value: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(PropTypes.exact({
+    value: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  })),
+  onChange: PropTypes.func.isRequired,
+};
